@@ -43,9 +43,18 @@ class App extends React.Component {
   artikelChecken = (artikel) => {
     // ToDo: implementiere diese Methode
     // artikel.gekauft 'umpolen'
+    artikel.gekauft = !artikel.gekauft
     // 'aktion' abhängig von 'artikel.gekauft' auf "erledigt" oder "reaktiviert" setzen
+    let aktion
+    if (artikel.gekauft == true){
+      aktion = "erledigt"
+    } else {
+      aktion = "unerledigt"
+    }
     // App.informieren mit 'aktion'
+    Modell.informieren(nachricht: `${artikel.name} "ist" ${aktion}`)
     // 'state' aktualisieren
+    this.setState(this.state)
   }
 
   artikelHinzufuegen() {
