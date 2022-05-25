@@ -50,6 +50,11 @@ class App extends React.Component {
 
   artikelHinzufuegen() {
     // ToDo: implementiere diese Methode
+    let eingabe = document.getElementById("artikelEingabe")
+    if (eingabe.value.trim().length > 0){
+      Modell.aktiveGruppe.artikelHinzufuegen(eingabe.value)
+      this.setState(this.state)
+    }
   }
 
   setAktiveGruppe(gruppe) {
