@@ -13,9 +13,10 @@ class PartyLock extends React.Component{
              * ToDo: Schreibe ein onChange-Event für diesen Button, sodass die Funktion handleLock ausgeführt wird.
              *  Diese wurde als Prop übergeben.
              */
+
             <div>
                 <label>{this.props.locked ? "Party name is locked" : "Party name is not locked"}
-                 <input type={"checkbox"}/>
+                 <input onChange={this.props.handleLock} type={"checkbox"}/>
                 </label>
             </div>
         )
